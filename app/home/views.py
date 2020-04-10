@@ -13,14 +13,13 @@ def homepage():
     """
     return render_template('home/index.html', title="Welcome")
 
-
-@home.route('/dashboard')
+@home.route('/dashboard1')
 @login_required
-def dashboard():
+def dashboard1():
     """
-    Render the dashboard template on the /dashboard route
+    Render the dashboard template on the /dashboard1 route
     """
-    return render_template('home/dashboard.html', title="Dashboard")
+    return render_template('home/dashboard1.html', title="Dashboard")
 
 @home.route('/dashboard2')
 @login_required
@@ -37,12 +36,3 @@ def dashboard3():
     Render the dashboard template on the /dashboard3 route
     """
     return render_template('home/dashboard3.html', title="Dashboard3")
-
-# add admin dashboard view
-@home.route('/admin')
-@login_required
-def admin_dashboard():
-    return render_template('home/admin_dashboard.html', title="Admin Dashboard")
-    # prevent non-admins from accessing the page
-    if not current_user.is_admin:
-        abort(403)

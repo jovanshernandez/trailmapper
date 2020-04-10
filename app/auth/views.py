@@ -1,3 +1,5 @@
+# app/auth/views.py
+
 from flask import flash, redirect, render_template, url_for
 from flask_login import login_required, login_user, logout_user
 
@@ -51,7 +53,7 @@ def login():
             login_user(employee)
 
             # redirect to the dashboard page after login
-            return redirect(url_for('home.dashboard'))
+            return redirect(url_for('home.homepage'))
 
         # when login details are incorrect
         else:

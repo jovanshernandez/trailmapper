@@ -16,18 +16,13 @@ def check_admin():
     if not current_user.is_admin:
         abort(403)
 
-@admin.route('/admin')
+# add admin dashboard view
+@admin.route('/dashboard')
 @login_required
-def homepage():
-    """
-    Render the homepage template on the / route
-    """
-    return render_template('../home/admin_dashboard.html', title="Admin Dashboard")
-
-
+def admin_dashboard():
+    return render_template('admin/admin_dashboard.html', title="Admin Dashboard")
 
 # Department Views
-
 @admin.route('/departments', methods=['GET', 'POST'])
 @login_required
 def list_departments():

@@ -23,13 +23,13 @@
             <ul class="nav navbar-nav navbar-right">
                 {% if current_user.is_authenticated %}
                   {% if current_user.is_admin %}
-                    <li><a href="{{ url_for('home.admin_dashboard') }}">Admin Dashboard</a></li>
+                    <li><a href="{{ url_for('admin.admin_dashboard') }}">Admin Dashboard</a></li>
                     <li><a href="{{ url_for('admin.list_departments') }}">Departments</a></li>
             		    <li><a href="{{ url_for('admin.list_roles') }}">Roles</a></li>
                     <li><a href="{{ url_for('admin.list_employees') }}">Employees</a></li>
 
                   {% else %}
-                    <li><a href="{{ url_for('home.dashboard') }}">Dashboard</a></li>
+                    <li><a href="{{ url_for('home.dashboard1') }}">Dashboard</a></li>
                     <li><a href="{{ url_for('home.dashboard2') }}">Data Analytics</a></li>
                     <li><a href="{{ url_for('home.dashboard3') }}">Strategic Hub</a></li>
                   {% endif %}
