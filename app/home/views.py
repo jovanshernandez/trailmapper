@@ -39,11 +39,10 @@ def dashboard3():
     return render_template('home/dashboard3.html', title="Dashboard3")
 
 # add admin dashboard view
-@home.route('/admin/dashboard')
+@home.route('/admin')
 @login_required
 def admin_dashboard():
+    return render_template('home/admin_dashboard.html', title="Admin Dashboard")
     # prevent non-admins from accessing the page
     if not current_user.is_admin:
         abort(403)
-
-    return render_template('home/admin_dashboard.html', title="Dashboard")

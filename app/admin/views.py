@@ -16,9 +16,17 @@ def check_admin():
     if not current_user.is_admin:
         abort(403)
 
+@admin.route('/admin')
+@login_required
+def homepage():
+    """
+    Render the homepage template on the / route
+    """
+    return render_template('../home/admin_dashboard.html', title="Admin Dashboard")
+
+
 
 # Department Views
-
 
 @admin.route('/departments', methods=['GET', 'POST'])
 @login_required
