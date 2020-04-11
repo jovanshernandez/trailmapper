@@ -19,7 +19,7 @@ def dashboard1():
     """
     Render the dashboard template on the /dashboard1 route
     """
-    return render_template('home/dashboard1.html', title="Dashboard")
+    return render_template('home/dashboard1.html', title="Dashboard1")
 
 @home.route('/dashboard2')
 @login_required

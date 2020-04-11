@@ -1,37 +1,37 @@
-# app/cm/views.py
+# app/pm/views.py
 
 from flask import abort, render_template
 from flask_login import current_user, login_required
 
-from . import cm
+from . import pm
 
-@cm.route('/')
+@pm.route('/')
 def homepage():
     """
-    Render the cmpage template on the / route
+    Render the pmpage template on the / route
     """
-    return render_template('cm/index.html', title="Welcome")
+    return render_template('pm/index.html', title="Welcome")
 
-@cm.route('/dashboard1')
+@pm.route('/dashboard1')
 @login_required
 def dashboard1():
     """
     Render the dashboard template on the /dashboard1 route
     """
-    return render_template('cm/dashboard1.html', title="Dashboard1")
+    return render_template('pm/dashboard1.html', title="Dashboard1")
 
-@cm.route('/dashboard2')
+@pm.route('/dashboard2')
 @login_required
 def dashboard2():
     """
     Render the dashboard template on the /dashboard2 route
     """
-    return render_template('cm/dashboard2.html', title="Dashboard2")
+    return render_template('pm/dashboard2.html', title="Dashboard2")
 
-@cm.route('/dashboard3')
+@pm.route('/dashboard3')
 @login_required
 def dashboard3():
     """
     Render the dashboard template on the /dashboard3 route
     """
-    return render_template('cm/dashboard3.html', title="Dashboard3")
+    return render_template('pm/dashboard3.html', title="Dashboard3")

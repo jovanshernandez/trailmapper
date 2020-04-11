@@ -1,5 +1,5 @@
 from flask import Blueprint
 
-cm = Blueprint('cm', __name__)
+pm = Blueprint('pm', __name__)
 
 from . import views

@@ -27,21 +27,29 @@
                     <li><a href="{{ url_for('admin.list_departments') }}">Departments</a></li>
             		    <li><a href="{{ url_for('admin.list_roles') }}">Roles</a></li>
                     <li><a href="{{ url_for('admin.list_employees') }}">Employees</a></li>
-                    {% elif 'Joe Schmoe' in current_user.department.name %}
-                    <li><a href="{{ url_for('staff.dashboard1') }}">JS Staff Dashboard</a></li>
-                    <li><a href="{{ url_for('staff.dashboard2') }}">JS Staff Data Analytics</a></li>
-                    <li><a href="{{ url_for('staff.dashboard3') }}">JS Staff Strategic Hub</a></li>
-                    {% elif 'Corky Messner Campaign' in current_user.department.name %}
-                    <li><a href="{{ url_for('cm.dashboard1') }}">CM Staff Dashboard</a></li>
-                    <li><a href="{{ url_for('cm.dashboard2') }}">CM Staff Data Analytics</a></li>
-                    <li><a href="{{ url_for('cm.dashboard3') }}">CM Staff Strategic Hub</a></li>
+                    {% elif current_user.department.id == 7 %}
+                    <li><a href="{{ url_for('th.dashboard1') }}">Dashboard</a></li>
+                    <li><a href="{{ url_for('th.dashboard2') }}">Data Analytics</a></li>
+                    <li><a href="{{ url_for('th.dashboard3') }}">Strategic Hub</a></li>
+                    {% elif current_user.department.id == 5 %}
+                    <li><a href="{{ url_for('pm.dashboard1') }}">Dashboard</a></li>
+                    <li><a href="{{ url_for('pm.dashboard2') }}">Data Analytics</a></li>
+                    <li><a href="{{ url_for('pm.dashboard3') }}">Strategic Hub</a></li>
+                    {% elif current_user.department.id == 4 %}
+                    <li><a href="{{ url_for('cm.dashboard1') }}">Dashboard</a></li>
+                    <li><a href="{{ url_for('cm.dashboard2') }}">Data Analytics</a></li>
+                    <li><a href="{{ url_for('cm.dashboard3') }}">Strategic Hub</a></li>
+                    {% elif current_user.department.id == 3 %}
+                    <li><a href="{{ url_for('th.dashboard1') }}">Dashboard</a></li>
+                    <li><a href="{{ url_for('th.dashboard2') }}">Data Analytics</a></li>
+                    <li><a href="{{ url_for('th.dashboard3') }}">Strategic Hub</a></li>
                     {% else %}
                     <li><a href="{{ url_for('home.dashboard1') }}">Dashboard</a></li>
                     <li><a href="{{ url_for('home.dashboard2') }}">Data Analytics</a></li>
                     <li><a href="{{ url_for('home.dashboard3') }}">Strategic Hub</a></li>
                   {% endif %}
                   <li><a href="{{ url_for('auth.logout') }}">Logout</a></li>
-                  <li><a><i class="fa fa-user"></i>  Hi, {{ current_user.department.name }}</a></li>
+                  <li><a><i class="fa fa-user"></i>  Hi, {{ current_user.email }}</a></li>
                 {% else %}
                   <li><a href="{{ url_for('home.homepage') }}">Home</a></li>
                   <li><a href="{{ url_for('auth.register') }}">Register</a></li>
