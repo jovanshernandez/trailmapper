@@ -36,6 +36,12 @@ def create_app(config_name):
     from .admin import admin as admin_blueprint
     app.register_blueprint(admin_blueprint, url_prefix='/admin')
 
+    from .cm import cm as cm_blueprint
+    app.register_blueprint(cm_blueprint, url_prefex='/cm')
+
+    from .staff import staff as staff_blueprint
+    app.register_blueprint(staff_blueprint, url_prefex='/staff')
+
     from .auth import auth as auth_blueprint
     app.register_blueprint(auth_blueprint)
 
