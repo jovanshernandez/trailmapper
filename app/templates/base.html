@@ -23,26 +23,29 @@
             <ul class="nav navbar-nav navbar-right">
                 {% if current_user.is_authenticated %}
                   {% if current_user.is_admin %}
-                    <li><a href="{{ url_for('admin.admin_dashboard') }}">Admin Dashboard</a></li>
-                    <li><a href="{{ url_for('admin.list_departments') }}">Departments</a></li>
+                    <li><a href="{{ url_for('admin.list_departments') }}">Campaigns</a></li>
             		    <li><a href="{{ url_for('admin.list_roles') }}">Roles</a></li>
-                    <li><a href="{{ url_for('admin.list_employees') }}">Employees</a></li>
-                    {% elif current_user.department.id == 7 %}
-                    <li><a href="{{ url_for('th.dashboard1') }}">Dashboard</a></li>
-                    <li><a href="{{ url_for('th.dashboard2') }}">Data Analytics</a></li>
-                    <li><a href="{{ url_for('th.dashboard3') }}">Strategic Hub</a></li>
+                    <li><a href="{{ url_for('admin.list_employees') }}">Users</a></li>
+                    {% elif current_user.department.id == 7 %} #Demo User
+                    <li><a href="{{ url_for('home.dashboard1') }}">District Data</a></li>
+                    <li><a href="{{ url_for('home.dashboard2') }}">Metrics</a></li>
+                    <li><a href="{{ url_for('home.dashboard3') }}">Digital Metrics</a></li>
+                    <li><a href="{{ url_for('home.dashboard3') }}">Tasks</a></li>
                     {% elif current_user.department.id == 5 %}
-                    <li><a href="{{ url_for('pm.dashboard1') }}">Dashboard</a></li>
-                    <li><a href="{{ url_for('pm.dashboard2') }}">Data Analytics</a></li>
-                    <li><a href="{{ url_for('pm.dashboard3') }}">Strategic Hub</a></li>
+                    <li><a href="{{ url_for('pm.dashboard1') }}">Elections & Voter Data</a></li>
+                    <li><a href="{{ url_for('pm.dashboard2') }}">Metrics</a></li>
+                    <li><a href="{{ url_for('pm.dashboard3') }}">Field Guides</a></li>
+                    <li><a href="{{ url_for('pm.dashboard4') }}">Tasks</a></li>
                     {% elif current_user.department.id == 4 %}
-                    <li><a href="{{ url_for('cm.dashboard1') }}">Dashboard</a></li>
-                    <li><a href="{{ url_for('cm.dashboard2') }}">Data Analytics</a></li>
-                    <li><a href="{{ url_for('cm.dashboard3') }}">Strategic Hub</a></li>
+                    <li><a href="{{ url_for('cm.dashboard1') }}">Statewide Data</a></li>
+                    <li><a href="{{ url_for('cm.dashboard2') }}">Metrics</a></li>
+                    <li><a href="{{ url_for('cm.dashboard3') }}">Field Guides</a></li>
+                    <li><a href="{{ url_for('cm.dashboard4') }}">Tasks</a></li>
                     {% elif current_user.department.id == 3 %}
-                    <li><a href="{{ url_for('th.dashboard1') }}">Dashboard</a></li>
-                    <li><a href="{{ url_for('th.dashboard2') }}">Data Analytics</a></li>
-                    <li><a href="{{ url_for('th.dashboard3') }}">Strategic Hub</a></li>
+                    <li><a href="{{ url_for('th.dashboard1') }}">District Data</a></li>
+                    <li><a href="{{ url_for('th.dashboard2') }}">Metrics</a></li>
+                    <li><a href="{{ url_for('th.dashboard3') }}">Field Guides</a></li>
+                    <li><a href="{{ url_for('th.dashboard4') }}">Tasks</a></li>
                     {% else %}
                     <li><a href="{{ url_for('home.dashboard1') }}">Dashboard</a></li>
                     <li><a href="{{ url_for('home.dashboard2') }}">Data Analytics</a></li>
