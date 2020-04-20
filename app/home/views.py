@@ -37,7 +37,7 @@ def dashboard3():
     """
     return render_template('home/dashboard3.html', title="Dashboard3")
 
-@home.route('/dashboard3')
+@home.route('/dashboard4')
 @login_required
 def dashboard4():
     """
