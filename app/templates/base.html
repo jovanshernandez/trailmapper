@@ -29,7 +29,7 @@
                     {% elif current_user.department.id == 7 %} #Demo User
                     <li><a href="{{ url_for('home.dashboard1') }}">District Data</a></li>
                     <li><a href="{{ url_for('home.dashboard2') }}">Metrics</a></li>
-                    <li><a href="{{ url_for('home.dashboard3') }}">Digital Metrics</a></li>
+                    <li><a href="{{ url_for('home.dashboard3') }}">Field Guide</a></li>
                     <li><a href="{{ url_for('home.dashboard4') }}">Tasks</a></li>
                     {% elif current_user.department.id == 5 %}
                     <li><a href="{{ url_for('pm.dashboard1') }}">Elections & Voter Data</a></li>
