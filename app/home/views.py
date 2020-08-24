@@ -44,3 +44,11 @@ def dashboard4():
     Render the dashboard template on the /dashboard4 route
     """
     return render_template('home/dashboard4.html', title="Dashboard4")    
+
+@home.route('/dashboard5')
+@login_required
+def dashboard5():
+    """
+    Render the dashboard template on the /dashboard5 route
+    """
+    return render_template('home/dashboard5.html', title="Dashboard5")    
