@@ -46,7 +46,10 @@ def create_app(config_name):
     from .th import th as th_blueprint
     app.register_blueprint(th_blueprint, url_prefix='/th')
 
-    from .pm import pm as th_blueprint
-    app.register_blueprint(th_blueprint, url_prefix='/pm')
+    from .pm import pm as pm_blueprint
+    app.register_blueprint(pm_blueprint, url_prefix='/pm')
+
+    from .sl import sl as sl_blueprint
+    app.register_blueprint(sl_blueprint, url_prefix='/sl')
 
     return app
