@@ -53,6 +53,16 @@
                     <li><a href="{{ url_for('sl.dashboard2') }}">Metrics</a></li> -->
                     <li><a href="{{ url_for('sl.dashboard3') }}">Data</a></li>
                     <!-- <li><a href="{{ url_for('sl.dashboard4') }}">Tasks</a></li> -->
+                    {% elif current_user.department.id == 12 %}
+                    <!-- <li><a href="{{ url_for('pd.dashboard1') }}">District Data</a></li>
+                    <li><a href="{{ url_for('pd.dashboard2') }}">Metrics</a></li> -->
+                    <li><a href="{{ url_for('pd.dashboard3') }}">Data</a></li>
+                    <!-- <li><a href="{{ url_for('pd.dashboard4') }}">Tasks</a></li> -->
+                    {% elif current_user.department.id == 13 %}
+                    <li><a href="{{ url_for('sab.dashboard1') }}">Data</a>
+                    <li><a href="{{ url_for('sab.dashboard2') }}">Call List</a></li>
+                    <!-- <li><a href="{{ url_for('pd.dashboard3') }}">Data</a></li> -->
+                    <!-- <li><a href="{{ url_for('pd.dashboard4') }}">Tasks</a></li> -->
                     {% else %}
                     <li><a href="{{ url_for('home.dashboard1') }}">Dashboard</a></li>
                     <li><a href="{{ url_for('home.dashboard2') }}">Data Analytics</a></li>
@@ -72,27 +82,28 @@
     <div class="wrapper">
       {% block body %}
       {% endblock %}
-      <div class="push"></div>
+      <div class="push">
+      </div>
     </div>
-    <footer style="margin-top: 100px;>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="list-inline">
-                        <li><a href="{{ url_for('home.homepage') }}">Home</a></li>
-                        <li class="footer-menu-divider">⋅</li>
-                        {% if current_user.is_authenticated %}
-                          <li><a href="{{ url_for('auth.logout') }}">Logout</a></li>
-                        {% else %}
-                          <li><a href="{{ url_for('auth.register') }}">Register</a></li>
-                          <li class="footer-menu-divider">⋅</li>
-                          <li><a href="{{ url_for('auth.login') }}">Login</a></li>
-                        {% endif %}
-                    </ul>
-		  <p class="copyright text-muted small">Copyright © 2020. All Rights Reserved of Trailmapper</p>
-                </div>
-            </div>
-        </div>
-    </footer>
 </body>
+<footer>
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <ul class="list-inline">
+                  <li><a href="{{ url_for('home.homepage') }}">Home</a></li>
+                  <li class="footer-menu-divider">⋅</li>
+                  {% if current_user.is_authenticated %}
+                    <li><a href="{{ url_for('auth.logout') }}">Logout</a></li>
+                  {% else %}
+                    <li><a href="{{ url_for('auth.register') }}">Register</a></li>
+                    <li class="footer-menu-divider">⋅</li>
+                    <li><a href="{{ url_for('auth.login') }}">Login</a></li>
+                  {% endif %}
+              </ul>
+            <p class="copyright text-muted small">Copyright © 2020. All Rights Reserved of Trailmapper</p>
+          </div>
+      </div>
+  </div>
+</footer>
 </html>

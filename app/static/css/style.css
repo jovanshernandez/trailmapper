@@ -21,6 +21,11 @@ a:hover, .navbar-default .navbar-brand:hover, .navbar-default .navbar-nav>li>a:h
 footer {
     padding: 50px 0;
     background-color: rgb(74, 202, 179);
+    margin-top: 10em;
+    clear: both;
+    /* position: fixed; */
+    margin: auto;
+    width: 100%;
 }
 
 p.copyright {
@@ -57,7 +62,9 @@ p.copyright {
 
 .footer, .push {
   clear: both;
-  height: 4em;
+  height: 10em;
+  position: relative;
+  width: 100%;
 }
 
 .intro-divider {
@@ -111,7 +118,7 @@ p.copyright {
 
 .outer {
     display: table;
-    position: absolute;
+    position: relative;
     height: 70%;
     width: 100%;
 }

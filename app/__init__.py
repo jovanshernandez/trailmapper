@@ -52,4 +52,10 @@ def create_app(config_name):
     from .sl import sl as sl_blueprint
     app.register_blueprint(sl_blueprint, url_prefix='/sl')
 
+    from .pd import pd as pd_blueprint
+    app.register_blueprint(pd_blueprint, url_prefix='/pd')
+
+    from .sab import sab as sab_blueprint
+    app.register_blueprint(sab_blueprint, url_prefix='/sab')
+
     return app
