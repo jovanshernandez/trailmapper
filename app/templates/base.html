@@ -59,8 +59,38 @@
                     <li><a href="{{ url_for('pd.dashboard3') }}">Data</a></li>
                     <!-- <li><a href="{{ url_for('pd.dashboard4') }}">Tasks</a></li> -->
                     {% elif current_user.department.id == 13 %}
-                    <li><a href="{{ url_for('sab.dashboard1') }}">Data</a>
+                    <li><a href="{{ url_for('sab.dashboard1') }}">Data</a></li>
                     <li><a href="{{ url_for('sab.dashboard2') }}">Call List</a></li>
+                    <!-- <li><a href="{{ url_for('pd.dashboard3') }}">Data</a></li> -->
+                    <!-- <li><a href="{{ url_for('pd.dashboard4') }}">Tasks</a></li> -->
+                    {% elif current_user.department.id == 14 %}
+                    <li><a href="{{ url_for('mon.dashboard1') }}">Data</a></li>
+                    <li><a href="{{ url_for('mon.dashboard2') }}">Call List</a></li>
+                    <!-- <li><a href="{{ url_for('pd.dashboard3') }}">Data</a></li> -->
+                    <!-- <li><a href="{{ url_for('pd.dashboard4') }}">Tasks</a></li> -->
+                    {% elif current_user.department.id == 15 %}
+                    <li><a href="{{ url_for('ack.dashboard1') }}">Data</a></li>
+                    <li><a href="{{ url_for('ack.dashboard2') }}">Call List</a></li>
+                    <!-- <li><a href="{{ url_for('pd.dashboard3') }}">Data</a></li> -->
+                    <!-- <li><a href="{{ url_for('pd.dashboard4') }}">Tasks</a></li> -->
+                    {% elif current_user.department.id == 16 %}
+                    <li><a href="{{ url_for('blak.dashboard1') }}">Data</a></li>
+                    <li><a href="{{ url_for('blak.dashboard2') }}">Call List</a></li>
+                    <!-- <li><a href="{{ url_for('pd.dashboard3') }}">Data</a></li> -->
+                    <!-- <li><a href="{{ url_for('pd.dashboard4') }}">Tasks</a></li> -->
+                    {% elif current_user.department.id == 17 %}
+                    <li><a href="{{ url_for('genz.dashboard1') }}">Data</a></li>
+                    <li><a href="{{ url_for('genz.dashboard2') }}">Call List</a></li>
+                    <!-- <li><a href="{{ url_for('pd.dashboard3') }}">Data</a></li> -->
+                    <!-- <li><a href="{{ url_for('pd.dashboard4') }}">Tasks</a></li> -->
+                    {% elif current_user.department.id == 18 %}
+                    <li><a href="{{ url_for('gator.dashboard1') }}">Data</a></li>
+                    <li><a href="{{ url_for('gator.dashboard2') }}">Call List</a></li>
+                    <!-- <li><a href="{{ url_for('pd.dashboard3') }}">Data</a></li> -->
+                    <!-- <li><a href="{{ url_for('pd.dashboard4') }}">Tasks</a></li> -->
+                    {% elif current_user.department.id == 19 %}
+                    <li><a href="{{ url_for('welton.dashboard1') }}">Data</a></li>
+                    <li><a href="{{ url_for('welton.dashboard2') }}">Call List</a></li>
                     <!-- <li><a href="{{ url_for('pd.dashboard3') }}">Data</a></li> -->
                     <!-- <li><a href="{{ url_for('pd.dashboard4') }}">Tasks</a></li> -->
                     {% else %}

@@ -58,4 +58,22 @@ def create_app(config_name):
     from .sab import sab as sab_blueprint
     app.register_blueprint(sab_blueprint, url_prefix='/sab')
 
+    from .ack import ack as ack_blueprint
+    app.register_blueprint(ack_blueprint, url_prefix='/ack')
+
+    from .mon import mon as mon_blueprint
+    app.register_blueprint(mon_blueprint, url_prefix='/mon')
+
+    from .blak import blak as blak_blueprint
+    app.register_blueprint(blak_blueprint, url_prefix='/blak')
+
+    from .genz import genz as genz_blueprint
+    app.register_blueprint(genz_blueprint, url_prefix='/genz')
+
+    from .gator import gator as gator_blueprint
+    app.register_blueprint(gator_blueprint, url_prefix='/gator')
+
+    from .welton import welton as welton_blueprint
+    app.register_blueprint(welton_blueprint, url_prefix='/welton')
+
     return app
