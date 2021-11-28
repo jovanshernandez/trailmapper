@@ -76,4 +76,49 @@ def create_app(config_name):
     from .welton import welton as welton_blueprint
     app.register_blueprint(welton_blueprint, url_prefix='/welton')
 
+    from .wrs1 import wrs1 as wrs1_blueprint
+    app.register_blueprint(wrs1_blueprint, url_prefix='/wrs1')
+
+    from .wrs2 import wrs2 as wrs2_blueprint
+    app.register_blueprint(wrs2_blueprint, url_prefix='/wrs2')
+
+    from .wrs3 import wrs3 as wrs3_blueprint
+    app.register_blueprint(wrs3_blueprint, url_prefix='/wrs3')
+
+    from .ks import ks as ks_blueprint
+    app.register_blueprint(ks_blueprint, url_prefix='/ks')
+
+    from .lschel import lschel as lschel_blueprint
+    app.register_blueprint(lschel_blueprint, url_prefix='/lschel')
+
+    from .spet import spet as spet_blueprint
+    app.register_blueprint(spet_blueprint, url_prefix='/spet')
+
+    from .rgz import rgz as rgz_blueprint
+    app.register_blueprint(rgz_blueprint, url_prefix='/rgz')
+
+    from .mif import mif as mif_blueprint
+    app.register_blueprint(mif_blueprint, url_prefix='/mif')
+    
+    from .pp import pp as pp_blueprint
+    app.register_blueprint(pp_blueprint, url_prefix='/pp')
+
+    from .ea import ea as ea_blueprint
+    app.register_blueprint(ea_blueprint, url_prefix='/ea')
+
+    from .fiore import fiore as fiore_blueprint
+    app.register_blueprint(fiore_blueprint, url_prefix='/fiore')
+
+    from .taylor import taylor as taylor_blueprint
+    app.register_blueprint(taylor_blueprint, url_prefix='/taylor')
+
+    from .staples import staples as staples_blueprint
+    app.register_blueprint(staples_blueprint, url_prefix='/staples')
+
+    from .cory import cory as cory_blueprint
+    app.register_blueprint(cory_blueprint, url_prefix='/cory')
+
+    from .beyer import beyer as beyer_blueprint
+    app.register_blueprint(beyer_blueprint, url_prefix='/beyer')
+
     return app
